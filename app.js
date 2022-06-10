@@ -12,4 +12,4 @@ app.get('/register', (_req, res)=>{
 app.get('/login', (_req, res)=>{
     res.sendFile (path.join(__dirname,'/views/login.html'))
 });
-app.listen (3030, (req, res)=> console.log ('Servidor 3030 funcionando'));
+app.listen (process.env.PORT||3000, (req, res)=> console.log ('Servidor 3030 funcionando'));
